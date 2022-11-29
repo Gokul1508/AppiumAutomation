@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-29T20:57:20Z" name="MobileAutomation" finished-at="2022-11-29T20:58:24Z" duration-ms="64235">
+    <groups>
+    </groups>
+    <test started-at="2022-11-29T20:57:20Z" name="iOSAutomation" finished-at="2022-11-29T20:58:24Z" duration-ms="64235">
+      <class name="testcase.TC02EnterAndCompareTextTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@1356d4d4]" started-at="2022-11-29T20:58:01Z" name="launchApp" finished-at="2022-11-29T20:58:07Z" duration-ms="5959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="getText()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@1356d4d4]" started-at="2022-11-29T20:58:07Z" name="getText" finished-at="2022-11-29T20:58:23Z" duration-ms="16601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getText -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@1356d4d4]" started-at="2022-11-29T20:58:23Z" name="quit" finished-at="2022-11-29T20:58:24Z" duration-ms="1068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testcase.TC02EnterAndCompareTextTest -->
+      <class name="testcase.TC01ChangeDateTest">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testcase.TC01ChangeDateTest@55f616cf]" started-at="2022-11-29T20:57:20Z" name="launch" finished-at="2022-11-29T20:57:27Z" duration-ms="7415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="changeDate()[pri:0, instance:testcase.TC01ChangeDateTest@55f616cf]" started-at="2022-11-29T20:57:27Z" name="changeDate" finished-at="2022-11-29T20:58:00Z" duration-ms="32094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeDate -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcase.TC01ChangeDateTest@55f616cf]" started-at="2022-11-29T20:58:00Z" name="quit" finished-at="2022-11-29T20:58:01Z" duration-ms="1084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testcase.TC01ChangeDateTest -->
+    </test> <!-- iOSAutomation -->
+  </suite> <!-- MobileAutomation -->
+</testng-results>

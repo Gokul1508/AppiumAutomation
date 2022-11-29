@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MobileAutomation]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="iOSAutomation(failed)" verbose="0">
+    <classes>
+      <class name="testcase.TC02EnterAndCompareTextTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="quit"/>
+          <include name="getText"/>
+        </methods>
+      </class> <!-- testcase.TC02EnterAndCompareTextTest -->
+      <class name="testcase.TC01ChangeDateTest">
+        <methods>
+          <include name="quit"/>
+          <include name="changeDate"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- testcase.TC01ChangeDateTest -->
+    </classes>
+  </test> <!-- iOSAutomation(failed) -->
+</suite> <!-- Failed suite [MobileAutomation] -->
