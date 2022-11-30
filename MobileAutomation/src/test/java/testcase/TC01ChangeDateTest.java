@@ -1,65 +1,44 @@
 package testcase;
 
-import io.appium.java_client.ios.IOSDriver;
 import objectRepo.DatePickerPage;
 import objectRepo.HomePage;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.CommonFunctionalities;
 
-import java.net.MalformedURLException;
-
 public class TC01ChangeDateTest extends CommonFunctionalities {
 
-    IOSDriver<?> driver = null;
     HomePage homePage = null;
+
     DatePickerPage datePickerPage = null;
+
     Logger log = Logger.getLogger(TC01ChangeDateTest.class.getName());
 
     @BeforeClass
-    public void launch() {
-        BasicConfigurator.configure();
-        try {
-            driver = desiredCapabilities();
-            homePage = new HomePage(driver);
-            datePickerPage = new DatePickerPage(driver);
-            log.info("App is launched.");
-        } catch (MalformedURLException e) {
-            log.error(e.getMessage());
-        }
-
+    public void initElements() {
+        homePage = new HomePage(driver);
+        datePickerPage = new DatePickerPage(driver);
     }
 
     @Test
     public void changeDate() throws InterruptedException {
-        click(homePage.getDatePickerButton());
+        click(homePage.getDatePickerButton(), "Date Picker Button");
         log.info("DatePicker Page is displayed.");
-        click(datePickerPage.getCalenderButton());
-        click(datePickerPage.getToNextMonth());
+        click(datePickerPage.getCalenderButton(), "Calender Button");
+        click(datePickerPage.getToNextMonth(), "Next Month Button");
         Thread.sleep(5000);
-        click(datePickerPage.getDateTo());
-        clickAction(driver, datePickerPage.getDateTo());
-        pressTabKey(datePickerPage.getDateTo());
+        clickAction(driver, datePickerPage.getDateTo(), "Day 7");
         log.info("Date is changed.");
-        clickAction(driver, datePickerPage.getClockPicker());
-        click(datePickerPage.getHourPicker());
-        click(datePickerPage.getKeyOne());
-        click(datePickerPage.getKeyOne());
-        click(datePickerPage.getKeyTwo());
-        click(datePickerPage.getKeySix());
-        clickAction(driver, homePage.getBackButton());
+        clickAction(driver, datePickerPage.getClockPicker(), "Time Picker Button");
+        click(datePickerPage.getHourPicker(), "Hour Time Picker");
+        click(datePickerPage.getKeyOne(), "Key 1 in Keyboard");
+        click(datePickerPage.getKeyOne(), "Key 1 in Keyboard");
+        click(datePickerPage.getKeyTwo(), "Key 2 in Keyboard");
+        click(datePickerPage.getKeySix(), "Key 6 in Keyboard");
+        clickAction(driver, homePage.getBackButton(), "Empty Region around the Time Picker");
         log.info("Time is changed.");
-        click(homePage.getBackButton());
-    }
-
-    @AfterClass
-    public void quit() {
-        driver.closeApp();
-        driver.quit();
-        log.info("TestCase executed successfully.");
+        click(homePage.getBackButton(), "UIKitCatalog Back Button");
     }
 
 }
