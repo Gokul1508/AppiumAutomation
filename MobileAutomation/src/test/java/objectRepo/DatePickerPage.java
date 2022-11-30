@@ -34,6 +34,9 @@ public class DatePickerPage {
     @iOSXCUITFindBy(accessibility = "6")
     IOSElement keySix;
 
+    @iOSXCUITFindBy(accessibility = "PopoverDismissRegion")
+    IOSElement emptyRegion;
+
     public DatePickerPage(IOSDriver<?> driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(5)), this);
     }
@@ -69,4 +72,6 @@ public class DatePickerPage {
     public IOSElement getToNextMonth() {
         return toNextMonth;
     }
+
+    public IOSElement getEmptyRegion() { return emptyRegion; }
 }

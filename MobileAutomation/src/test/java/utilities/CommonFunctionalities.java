@@ -4,18 +4,36 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.Keys;
+import io.qameta.allure.Step;
+import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CommonFunctionalities {
 
-    static DesiredCapabilities capabilities = null;
+    public static IOSDriver<?> driver;
 
-    public static IOSDriver<?> desiredCapabilities() throws MalformedURLException {
+    static DesiredCapabilities capabilities;
+
+
+    @BeforeSuite
+    public void launch() throws MalformedURLException {
+        driver = initialize();
+        BasicConfigurator.configure();
+    }
+
+    @AfterSuite
+    public void quit() {
+        driver.closeApp();
+        driver.quit();
+    }
+
+    public static IOSDriver<?> initialize() throws MalformedURLException {
         capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         capabilities.setCapability(MobileCapabilityType.APP, "/Users/gokul/Downloads/UIKitCatalog.app");
@@ -30,18 +48,23 @@ public class CommonFunctionalities {
         return new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
 
-    public void click(IOSElement element) {
+    @Step("Performed click action on {1}.")
+    public void click(IOSElement element, String elementName) {
         element.click();
+        System.out.println("Performed click action on "+ elementName);
     }
 
-    public void clickAction(IOSDriver<?> driver, IOSElement element) {
+    @Step("Passed the text '{1}' into the default text-field {2}.")
+    public void sendKeys(IOSElement element, String message, String elementName) {
+        element.sendKeys(message);
+        System.out.println("Passed the text"+ message +"into the default text-field "+ elementName);
+    }
+
+    @Step("Performed click action on {2}.")
+    public void clickAction(IOSDriver<?> driver, IOSElement element, String elementName) {
         Actions action = new Actions(driver);
         action.click(element).perform();
+        System.out.println("Performed click action on "+ elementName);
     }
-
-    public void pressTabKey(IOSElement element) {
-        element.sendKeys(Keys.TAB);
-    }
-
 
 }
