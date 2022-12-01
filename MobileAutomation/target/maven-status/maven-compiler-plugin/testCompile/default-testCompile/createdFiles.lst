@@ -1,6 +1,7 @@
 objectRepo/TextFieldsPage.class
-objectRepo/HomePage.class
 testcase/TC02EnterAndCompareTextTest.class
+testcase/TC03sampleTestCase.class
+objectRepo/HomePage.class
 utilities/CommonFunctionalities.class
 testcase/TC01ChangeDateTest.class
 objectRepo/DatePickerPage.class

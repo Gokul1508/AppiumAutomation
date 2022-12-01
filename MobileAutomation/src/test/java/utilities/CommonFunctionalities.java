@@ -1,9 +1,12 @@
 package utilities;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.TapOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 import io.qameta.allure.Step;
 import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.interactions.Actions;
