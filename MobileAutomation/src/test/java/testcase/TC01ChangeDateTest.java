@@ -21,7 +21,9 @@ public class TC01ChangeDateTest extends CommonFunctionalities {
         datePickerPage = new DatePickerPage(driver);
     }
 
-    @Test
+
+
+    @Test()
     public void changeDate() throws InterruptedException {
         click(homePage.getDatePickerButton(), "Date Picker Button");
         log.info("DatePicker Page is displayed.");
@@ -30,12 +32,12 @@ public class TC01ChangeDateTest extends CommonFunctionalities {
         Thread.sleep(5000);
         clickAction(driver, datePickerPage.getDateTo(), "Day 7");
         log.info("Date is changed.");
-        clickAction(driver, datePickerPage.getClockPicker(), "Time Picker Button");
-        click(datePickerPage.getHourPicker(), "Hour Time Picker");
-        click(datePickerPage.getKeyOne(), "Key 1 in Keyboard");
-        click(datePickerPage.getKeyOne(), "Key 1 in Keyboard");
-        click(datePickerPage.getKeyTwo(), "Key 2 in Keyboard");
-        click(datePickerPage.getKeySix(), "Key 6 in Keyboard");
+        clickAction(driver, datePickerPage.getClockPicker(),"Time Picker Wheel");
+        datePickerPage.scrollHour(driver, datePickerPage.getHourPicker(), 11, "Hour Picker");
+        datePickerPage.tap(driver, datePickerPage.getHourPicker(), "Hour Picker");
+        datePickerPage.scrollMinute(driver, datePickerPage.getMinutePicker(), 26, "Minute Picker");
+        datePickerPage.tap(driver, datePickerPage.getMinutePicker(), "Minute Picker");
+        datePickerPage.scrollAmPm(driver, datePickerPage.getAmPmPicker(), "PM", "AmPm Picker");
         clickAction(driver, homePage.getBackButton(), "Empty Region around the Time Picker");
         log.info("Time is changed.");
         click(homePage.getBackButton(), "UIKitCatalog Back Button");

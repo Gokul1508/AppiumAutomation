@@ -1,1 +1,0 @@
-{"uuid":"662a0cf3-37d5-4c3a-ab93-18646f15a9f5","name":"testcase.TC02EnterAndCompareTextTest","children":["e2bff473-cc2c-476b-bcec-fe1dda3ae973"],"befores":[{"name":"initElements","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1669815604360,"stop":1669815604362}],"afters":[],"start":1669815585039,"stop":1669815611383}

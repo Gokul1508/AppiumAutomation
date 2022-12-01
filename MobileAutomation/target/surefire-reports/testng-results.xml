@@ -2,34 +2,34 @@
 <testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-30T13:39:45Z" name="MobileAutomation" finished-at="2022-11-30T13:40:11Z" duration-ms="26191">
+  <suite started-at="2022-12-01T10:15:17Z" name="MobileAutomation" finished-at="2022-12-01T10:16:02Z" duration-ms="45241">
     <groups>
     </groups>
-    <test started-at="2022-11-30T13:39:45Z" name="iOSAutomation" finished-at="2022-11-30T13:40:11Z" duration-ms="26191">
+    <test started-at="2022-12-01T10:15:17Z" name="iOSAutomation" finished-at="2022-12-01T10:16:02Z" duration-ms="45241">
       <class name="testcase.TC02EnterAndCompareTextTest">
-        <test-method is-config="true" signature="initElements()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@469a7575]" started-at="2022-11-30T13:40:04Z" name="initElements" finished-at="2022-11-30T13:40:04Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initElements()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@412c5e8b]" started-at="2022-12-01T10:15:54Z" name="initElements" finished-at="2022-12-01T10:15:54Z" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initElements -->
-        <test-method signature="getText()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@469a7575]" started-at="2022-11-30T13:40:04Z" name="getText" finished-at="2022-11-30T13:40:11Z" duration-ms="6857" status="PASS">
+        <test-method signature="getText()[pri:0, instance:testcase.TC02EnterAndCompareTextTest@412c5e8b]" started-at="2022-12-01T10:15:54Z" name="getText" finished-at="2022-12-01T10:16:02Z" duration-ms="8184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getText -->
       </class> <!-- testcase.TC02EnterAndCompareTextTest -->
       <class name="testcase.TC01ChangeDateTest">
-        <test-method is-config="true" signature="launch()[pri:0, instance:testcase.TC01ChangeDateTest@5d66e944]" started-at="2022-11-30T13:39:38Z" name="launch" finished-at="2022-11-30T13:39:45Z" duration-ms="6838" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:testcase.TC01ChangeDateTest@348137e8]" started-at="2022-12-01T10:15:09Z" name="launch" finished-at="2022-12-01T10:15:17Z" duration-ms="7735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method is-config="true" signature="initElements()[pri:0, instance:testcase.TC01ChangeDateTest@5d66e944]" started-at="2022-11-30T13:39:45Z" name="initElements" finished-at="2022-11-30T13:39:45Z" duration-ms="247" status="PASS">
+        <test-method is-config="true" signature="initElements()[pri:0, instance:testcase.TC01ChangeDateTest@348137e8]" started-at="2022-12-01T10:15:17Z" name="initElements" finished-at="2022-12-01T10:15:17Z" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initElements -->
-        <test-method signature="changeDate()[pri:0, instance:testcase.TC01ChangeDateTest@5d66e944]" started-at="2022-11-30T13:39:45Z" name="changeDate" finished-at="2022-11-30T13:40:04Z" duration-ms="18942" status="PASS">
+        <test-method signature="changeDate()[pri:0, instance:testcase.TC01ChangeDateTest@348137e8]" started-at="2022-12-01T10:15:17Z" name="changeDate" finished-at="2022-12-01T10:15:54Z" duration-ms="36602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeDate -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcase.TC01ChangeDateTest@5d66e944]" started-at="2022-11-30T13:40:11Z" name="quit" finished-at="2022-11-30T13:40:12Z" duration-ms="1033" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcase.TC01ChangeDateTest@348137e8]" started-at="2022-12-01T10:16:02Z" name="quit" finished-at="2022-12-01T10:16:03Z" duration-ms="1085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
